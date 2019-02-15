@@ -27,10 +27,10 @@ var ctx = c.getContext("2d");
 c.height = window.innerHeight;
 c.width = window.innerWidth;
 
-//chinese characters - taken from the unicode charset
-var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
+//hiragana characters - taken from the unicode charset
+var hiragana = "ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢ";
 //converting the string into an array of single characters
-chinese = chinese.split("");
+hiragana = hiragana.split("");
 
 var font_size = 10;
 var columns = c.width/font_size; //number of columns for the rain
@@ -54,8 +54,8 @@ function draw()
 	//looping over drops
 	for(var i = 0; i < drops.length; i++)
 	{
-		//a random chinese character to print
-		var text = chinese[Math.floor(Math.random()*chinese.length)];
+		//a random hiragana character to print
+		var text = hiragana[Math.floor(Math.random()*hiragana.length)];
 		//x = i*font_size, y = value of drops[i]*font_size
 		ctx.fillText(text, i*font_size, drops[i]*font_size);
 		
